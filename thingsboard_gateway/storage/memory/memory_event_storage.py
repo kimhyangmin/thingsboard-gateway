@@ -14,7 +14,7 @@
 
 from queue import Empty, Full, Queue
 
-from thingsboard_gateway.storage.event_storage import EventStorage, log
+from storage.event_storage import EventStorage, log
 
 
 class MemoryEventStorage(EventStorage):

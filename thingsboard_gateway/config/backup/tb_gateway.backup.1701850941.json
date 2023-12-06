@@ -6,9 +6,7 @@
     "remoteConfiguration": true,
     "statistics": {
       "enable": true,
-      "statsSendPeriodInSeconds": 3600,
-      "configuration": null,
-      "commands": []
+      "statsSendPeriodInSeconds": 3600
     },
     "deviceFiltering": {
       "enable": false,
@@ -28,8 +26,7 @@
       "checkDeviceInactivity": false,
       "inactivityTimeoutSeconds": 200,
       "inactivityCheckPeriodSeconds": 500
-    },
-    "ts": 1700030449878
+    }
   },
   "storage": {
     "type": "memory",
@@ -41,8 +38,7 @@
     "max_records_per_file": 10000,
     "data_file_path": "./data/data.db",
     "messages_ttl_check_in_hours": 1,
-    "messages_ttl_in_days": 7,
-    "ts": 1700030449878
+    "messages_ttl_in_days": 7
   },
   "grpc": {
     "enabled": false,
@@ -54,14 +50,7 @@
     "minTimeBetweenPingsMs": 10000,
     "minPingIntervalWithoutDataMs": 5000,
     "keepAliveTimeMs": 10000,
-    "keepAliveTimeoutMs": 5000,
-    "ts": 1700030449878
+    "keepAliveTimeoutMs": 5000
   },
-  "connectors": [
-    {
-      "type": "can",
-      "name": "CAN Connector",
-      "configuration": "can.json"
-    }
-]
+  "connectors": []
 }

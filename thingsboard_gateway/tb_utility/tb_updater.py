@@ -23,7 +23,7 @@ from pkg_resources import get_distribution
 from requests import ConnectionError, post
 from simplejson import loads
 
-from thingsboard_gateway.tb_utility.tb_utility import TBUtility
+from tb_utility.tb_utility import TBUtility
 
 log = getLogger("service")
 

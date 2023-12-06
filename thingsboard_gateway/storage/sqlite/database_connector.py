@@ -17,7 +17,7 @@ from sqlite3 import connect, Connection
 from threading import RLock
 from typing import Optional
 
-from thingsboard_gateway.storage.sqlite.storage_settings import StorageSettings
+from storage.sqlite.storage_settings import StorageSettings
 
 
 from logging import getLogger

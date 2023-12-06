@@ -14,8 +14,8 @@
 import sys
 from os import curdir, listdir, mkdir, path
 
-from thingsboard_gateway.gateway.tb_gateway_service import TBGatewayService
-from thingsboard_gateway.gateway.hot_reloader import HotReloader
+from gateway.tb_gateway_service import TBGatewayService
+from gateway.hot_reloader import HotReloader
 
 
 def main():

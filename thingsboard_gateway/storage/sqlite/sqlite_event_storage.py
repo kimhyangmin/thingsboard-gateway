@@ -14,11 +14,11 @@
 
 from time import time
 
-from thingsboard_gateway.storage.event_storage import EventStorage
-from thingsboard_gateway.storage.sqlite.database import Database
+from storage.event_storage import EventStorage
+from storage.sqlite.database import Database
 from queue import Queue
-from thingsboard_gateway.storage.sqlite.database_request import DatabaseRequest
-from thingsboard_gateway.storage.sqlite.database_action_type import DatabaseActionType
+from storage.sqlite.database_request import DatabaseRequest
+from storage.sqlite.database_action_type import DatabaseActionType
 #
 #   No need to import DatabaseResponse, responses come to this component to be deconstructed
 #

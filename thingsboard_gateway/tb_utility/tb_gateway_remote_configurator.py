@@ -21,8 +21,8 @@ from regex import fullmatch
 from simplejson import dumps, load
 from packaging import version
 
-from thingsboard_gateway.gateway.tb_client import TBClient
-from thingsboard_gateway.tb_utility.tb_handler import TBLoggerHandler
+from gateway.tb_client import TBClient
+from tb_utility.tb_handler import TBLoggerHandler
 
 LOG = getLogger("service")
 
@@ -116,7 +116,7 @@ class RemoteConfigurator:
         If remote gateway version wasn't fetch (default set to '0.0'), remote configurator send all default
         connectors configs.
         """
-        from thingsboard_gateway.gateway.tb_gateway_service import DEFAULT_CONNECTORS
+        from gateway.tb_gateway_service import DEFAULT_CONNECTORS
 
         # remote gateway version fetching in __init__ method (_fetch_remote_gateway_version)
         LOG.info('Waiting for remote gateway version...')

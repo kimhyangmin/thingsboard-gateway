@@ -19,9 +19,9 @@ from threading import Thread
 from queue import Queue
 import datetime
 
-from thingsboard_gateway.storage.sqlite.database_connector import DatabaseConnector
-from thingsboard_gateway.storage.sqlite.database_action_type import DatabaseActionType
-from thingsboard_gateway.storage.sqlite.storage_settings import StorageSettings
+from storage.sqlite.database_connector import DatabaseConnector
+from storage.sqlite.database_action_type import DatabaseActionType
+from storage.sqlite.storage_settings import StorageSettings
 
 log = getLogger("database")
 

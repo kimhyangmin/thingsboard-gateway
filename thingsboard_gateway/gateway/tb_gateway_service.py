@@ -31,29 +31,29 @@ from time import sleep, time
 from simplejson import JSONDecodeError, dumps, load, loads
 from yaml import safe_load
 
-from thingsboard_gateway.gateway.constant_enums import DeviceActions, Status
-from thingsboard_gateway.gateway.constants import CONNECTED_DEVICES_FILENAME, CONNECTOR_PARAMETER, \
+from gateway.constant_enums import DeviceActions, Status
+from gateway.constants import CONNECTED_DEVICES_FILENAME, CONNECTOR_PARAMETER, \
     PERSISTENT_GRPC_CONNECTORS_KEY_FILENAME
-from thingsboard_gateway.gateway.device_filter import DeviceFilter
-from thingsboard_gateway.gateway.duplicate_detector import DuplicateDetector
-from thingsboard_gateway.gateway.shell.proxy import AutoProxy
-from thingsboard_gateway.gateway.statistics_service import StatisticsService
-from thingsboard_gateway.gateway.tb_client import TBClient
-from thingsboard_gateway.storage.file.file_event_storage import FileEventStorage
-from thingsboard_gateway.storage.memory.memory_event_storage import MemoryEventStorage
-from thingsboard_gateway.storage.sqlite.sqlite_event_storage import SQLiteEventStorage
-from thingsboard_gateway.tb_utility.tb_gateway_remote_configurator import RemoteConfigurator
-from thingsboard_gateway.tb_utility.tb_handler import TBLoggerHandler
-from thingsboard_gateway.tb_utility.tb_loader import TBModuleLoader
-from thingsboard_gateway.tb_utility.tb_logger import TbLogger
-from thingsboard_gateway.tb_utility.tb_remote_shell import RemoteShell
-from thingsboard_gateway.tb_utility.tb_updater import TBUpdater
-from thingsboard_gateway.tb_utility.tb_utility import TBUtility
+from gateway.device_filter import DeviceFilter
+from gateway.duplicate_detector import DuplicateDetector
+from gateway.shell.proxy import AutoProxy
+from gateway.statistics_service import StatisticsService
+from gateway.tb_client import TBClient
+from storage.file.file_event_storage import FileEventStorage
+from storage.memory.memory_event_storage import MemoryEventStorage
+from storage.sqlite.sqlite_event_storage import SQLiteEventStorage
+from tb_utility.tb_gateway_remote_configurator import RemoteConfigurator
+from tb_utility.tb_handler import TBLoggerHandler
+from tb_utility.tb_loader import TBModuleLoader
+from tb_utility.tb_logger import TbLogger
+from tb_utility.tb_remote_shell import RemoteShell
+from tb_utility.tb_updater import TBUpdater
+from tb_utility.tb_utility import TBUtility
 
 GRPC_LOADED = False
 try:
-    from thingsboard_gateway.gateway.grpc_service.grpc_connector import GrpcConnector
-    from thingsboard_gateway.gateway.grpc_service.tb_grpc_manager import TBGRPCServerManager
+    from gateway.grpc_service.grpc_connector import GrpcConnector
+    from gateway.grpc_service.tb_grpc_manager import TBGRPCServerManager
 
     GRPC_LOADED = True
 except ImportError:

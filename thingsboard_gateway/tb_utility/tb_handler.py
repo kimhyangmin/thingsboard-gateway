@@ -20,7 +20,7 @@ from time import time, sleep
 from os import environ
 from queue import Queue, Empty
 
-from thingsboard_gateway.tb_utility.tb_logger import TbLogger
+from tb_utility.tb_logger import TbLogger
 
 
 class TBLoggerHandler(logging.Handler):

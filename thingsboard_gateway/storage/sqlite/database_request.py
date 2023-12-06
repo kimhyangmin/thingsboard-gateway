@@ -12,7 +12,7 @@
 #     See the License for the specific language governing permissions and
 #     limitations under the License.
 
-from thingsboard_gateway.storage.sqlite.database_action_type import DatabaseActionType
+from storage.sqlite.database_action_type import DatabaseActionType
 
 
 class DatabaseRequest:

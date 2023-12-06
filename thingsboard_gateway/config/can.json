@@ -1,23 +1,22 @@
 {
   "interface": "socketcan",
-  "channel": "vcan0",
+  "channel": "can0",
   "backend": {
-    "fd": true
+    "fd": false
   },
   "reconnectPeriod": 5,
   "devices": [
     {
-      "name": "Car",
+      "name": "ev_3ce4b0520e05",
       "sendDataOnlyOnChange": false,
       "enableUnknownRpc": true,
       "strictEval": false,
       "attributes": [
         {
-          "key": "isDriverDoorOpened",
-          "nodeId": 41,
-          "command": "2:2:big:8717",
+          "key": "Attrib_01",
+          "nodeId": 1232,
           "value": "4:1:int",
-          "expression": "bool(value & 0b00000100)",
+          "expression": "value",
           "polling": {
             "type": "once",
             "dataInHex": "AB CD AB CD"
@@ -26,62 +25,40 @@
       ],
       "timeseries": [
         {
-          "key": "rpm",
-          "nodeId": 1918,
-          "isExtendedId": true,
-          "command": "2:2:big:48059",
-          "value": "4:2:big:int",
-          "expression": "value / 4",
+          "key": "Cell_01",
+          "nodeId": 1232,
+          "isExtendedId": false,
+          "value": "0:2:big:int",
+          "expression": "value",
           "polling": {
             "type": "always",
-            "period": 5,
-            "dataInHex": "aaaa bbbb aaaa bbbb"
+            "period": 1,
+            "dataInHex": "ABCD"
           }
         },
         {
-          "key": "milliage",
-          "nodeId": 1918,
-          "isExtendedId": true,
+          "key": "Cell_02",
+          "nodeId": 1232,
+          "isExtendedId": false,
+          "value": "2:2:little:int",
+          "expression": "value",
+          "polling": {
+            "type": "always",
+            "period": 1,
+            "dataInHex": "ABCD"
+          }
+        },
+        {
+          "key": "Cell_03",
+          "nodeId": 1232,
+          "isExtendedId": false,
           "value": "4:2:little:int",
-          "expression": "value * 10",
+          "expression": "value",
           "polling": {
             "type": "always",
-            "period": 30,
-            "dataInHex": "aa bb cc dd ee ff aa bb"
+            "period": 1,
+            "dataInHex": "ABCD"
           }
-        }
-      ],
-      "attributeUpdates": [
-        {
-          "attributeOnThingsBoard": "softwareVersion",
-          "nodeId": 64,
-          "isExtendedId": true,
-          "dataLength": 4,
-          "dataExpression": "value + 5",
-          "dataByteorder": "little"
-        }
-      ],
-      "serverSideRpc": [
-        {
-          "method": "sendSameData",
-          "nodeId": 4,
-          "isExtendedId": true,
-          "isFd": true,
-          "bitrateSwitch": true,
-          "dataInHex": "aa bb cc dd ee ff    aa bb aa bb cc d ee ff"
-        },
-        {
-          "method": "setLightLevel",
-          "nodeId": 5,
-          "dataLength": 2,
-          "dataByteorder": "little",
-          "dataBefore": "00AA"
-        },
-        {
-          "method": "setSpeed",
-          "nodeId": 16,
-          "dataAfter": "0102",
-          "dataExpression": "userSpeed if maxAllowedSpeed > userSpeed else maxAllowedSpeed"
         }
       ]
     }

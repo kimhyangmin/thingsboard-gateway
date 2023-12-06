@@ -22,7 +22,7 @@ from ssl import CERT_REQUIRED, PROTOCOL_TLSv1_2
 
 from simplejson import dumps, load
 
-from thingsboard_gateway.tb_utility.tb_utility import TBUtility
+from tb_utility.tb_utility import TBUtility
 
 try:
     from tb_gateway_mqtt import TBGatewayMqttClient, TBDeviceMqttClient
